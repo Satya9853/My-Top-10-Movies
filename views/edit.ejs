@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Edit Movie</title>
+    <link rel="stylesheet" href="add.css" />
+  </head>
+  <body>
+    <form action="/review" method="POST" id="input-form">
+      <input style="visibility:hidden" name="id" value="<%=id%>" />
+      <div class="form">
+        <div class="title">Welcome</div>
+        <div class="subtitle">Enter the details of the Movie</div>
+        <div class="input-container ic1">
+          <input
+            name="rating"
+            id="firstname"
+            class="input"
+            type="text"
+            placeholder=" "
+          />
+          <div class="cut"></div>
+          <label for="firstname" class="placeholder">Rating</label>
+        </div>
+        <div class="input-container ic2">
+          <textarea class="text-area" name="review" rows="6" cols="35" placeholder="write here..." ></textarea>
+          <div class="cut"></div>
+      </div>
+      <button type="text" class="submit">submit</button>
+    </form>
+
+  </body>
+</html>
