@@ -130,7 +130,8 @@ app.get("/delete", (req, res) => {
 });
 
 // Listen Port
-app.listen("3000", () => {
-  console.log("The server is running on port 3000");
-  console.log("http://localhost:3000/home");
-});
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
+app.listen(port);
