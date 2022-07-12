@@ -110,7 +110,7 @@ app
         if (err) {
           console.log(err);
         } else {
-          res.redirect("/home");
+          res.redirect("/");
         }
       }
     );
@@ -124,7 +124,7 @@ app.get("/delete", (req, res) => {
       console.log(err);
     } else {
       console.log("success");
-      res.redirect("/home");
+      res.redirect("/");
     }
   });
 });
