@@ -13,7 +13,9 @@ app.use(express.static("static"));
 api_key = process.env.API_KEY;
 
 // 2) Connecting to database
-mongoose.connect("mongodb://localhost:27017/movies");
+mongoose.connect(
+  "mongodb+srv://satya:satya9853@cluster0.ipeor.mongodb.net/movies"
+);
 
 // 3) Creating Collection Schema
 const movie_schema = mongoose.Schema({
@@ -128,6 +130,7 @@ app.get("/delete", (req, res) => {
     }
   });
 });
+
 
 // Listen Port
 let port = process.env.PORT;
