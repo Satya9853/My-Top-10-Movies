@@ -33,7 +33,7 @@ const movie_model = mongoose.model("top_movies", movie_schema);
 // ROUTING SECTION
 
 // 1) Home Route
-app.get("/home", (req, res) => {
+app.get("/", (req, res) => {
   movie_model
     .find({})
     .sort([["rating", -1]])
